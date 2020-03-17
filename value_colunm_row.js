@@ -9,7 +9,7 @@ function get_value_colunm_row() {
 
 
     var value_class  = new Array(parseInt(colunm));
-    var value_head_table = new Array(parseInt(colunm));
+    var value_table = new Array(parseInt(colunm));
     // value_class[0] = "c_";
     // console.log(value_class);
 
@@ -19,31 +19,19 @@ function get_value_colunm_row() {
     
     for(var x = 1 ; x <= colunm ; x++){
 
-        $('#head_table').append('<th class="add_table"><div  style="width: 100px;"><input type="text" class="form-control" id="insert_colunm"></div></th>');
+        $('#head_table').append('<th class="add_table'+ countt +'"><div  style="width: 100px;"><input type="text" class="form-control insert_colunm'+ countt +'"></div></th>');
         
 
+            value_table[count] = ".add_table"+countt;
+            $(value_table[count]).addClass('bg-dark');
 
+            value_class[count] = ".insert_colunm"+countt;
+            $(value_class[count]).addClass('bg-dark');
 
-
-            value_head_table[count] = ".t_"+parseInt(countt);
-            $('.add_table').addClass(value_head_table[count]);
-            console.log(value_head_table[count]);
-            // $(value_head_table[count]).addClass('bg-dark');
-
-
-
-
-            value_class[count] = ".c_"+ countt ;
-
-            console.log(value_class[count]);
-         
-
-        $('#insert_colunm').addClass(value_class[count]);
-
-        $(value_class[count]).addClass('bg-dark');
 
         count++;
         countt++;
+        
 
     }
     // for(var y = 1 ; y <= row ; y++){
