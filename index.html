@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Naive Bayes</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,16 +15,25 @@
 
 <body>
 
-  <div class="jumbotron jumbotron-fluid col">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Naive Bayes Classification</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+      </div>
+  </nav>
+
+
+  <!-- <div class="jumbotron jumbotron-fluid col text-white bg-dark">
     <div class="container">
       <h1 class="display-3">Naive Bayes Classification</h1>
       <p class="lead">Descipion</p>
-      <hr class="my-2">
+      <hr class="my-2" style="color: azure;">
     </div>
-  </div>
+  </div> -->
 
 
-  <div class="container">
+  <div class="container mt-3">
     <form class="col">
       <div class="form-row">
         <div class="col-md-4 mb-3">
@@ -37,13 +46,13 @@
         </div>
 
         <div class="col-md-4 mb-3 edit_button">
-          <button class="btn btn-primary" type="button" onclick="get_value_colunm_row()">Submit form</button>
+          <button class="btn btn-primary" type="button" onclick="get_value_colunm_row()" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">SUBMIT</button>
         </div>
       </div>
     </form>
   </div>
 
-  <div class="container"> 
+  <div class="container">
     <table class="table">
       <thead class="thead-light">
         <tr id="head_table">
@@ -53,6 +62,28 @@
       </tbody>
     </table>
   </div>
+
+  <div class="container">
+    <div class="col-md-4 mb-3" id="button_total">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <button class="btn btn-primary" type="button"  style="margin-left: auto;width: auto;" onclick="information_gain()">Information Gain</button>
+        <button class="btn btn-primary" type="button"  style="margin-left: auto;width: auto;" onclick="gini_index()">Gini Index</button>
+      </div>
+    </div>
+  </div>
+
+
+   
+
+   
+
+  <!-- <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <button class="btn btn-primary" type="button"  style="margin-left: auto;width: auto;" onclick="value_all_total()">OK</button>
+      </div>
+    </div>
+  </div> -->
 
 
 

@@ -23,10 +23,10 @@ function get_value_colunm_row() {
         
 
             value_table[count] = ".add_table"+countt;
-            $(value_table[count]).addClass('bg-dark');
+            // $(value_table[count]).addClass('bg-dark');
 
             value_class[count] = ".insert_colunm"+countt;
-            $(value_class[count]).addClass('bg-dark');
+            // $(value_class[count]).addClass('bg-dark');
 
 
         count++;
