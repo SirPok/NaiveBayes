@@ -42,32 +42,28 @@ function get_value_colunm_row() {
     var count_row = 1 ;
     var value_row = new Array(parseInt(row));
 
+
     for(var m = 1 ; m <= row ; m++){
 
-        $('#add_row').append('<tr class="add_td'+count_row+'"><td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td></tr>');
+        $('#add_row').append('<tr class="add_td'+count_row+'"></tr>');
+        value_row[count_row_index] = ".add_td"+count_row;
 
-        for(var n = 1 ; n <= row ; n++){
+        console.log(value_row[count_row_index]);
 
-            value_row[count_row_index] = ".add_td"+count_row;
-            $(value_row[count_row_index]).append('<td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td>');
+        for(var n = 1 ; n <= colunm ; n++){
 
+            $(value_row[count_row_index]).append('<td><div  style="width: 100px;"><input type="text" class="form-control" id="value_insert_row'+count_row+'"></div></td>');
+            
+            count_row++;
         }
 
-        count_row++;
+
+        
         count_row_index++;
     }
 
-    // for(var y = 1 ; y <= row ; y++){
 
-    //     $('#add_row').append('<tr id="test"><td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td></tr>');
 
-    //     for(var m = 1 ; m <= 1 ; m++){
-
-    //         $('#test').append('<td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td>');
-
-    //     }
-
-    // }
 
 
 }
