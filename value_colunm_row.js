@@ -6,7 +6,7 @@ function get_value_colunm_row() {
     var edit_colunm = colunm - parseInt(1);
 
     console.log(colunm);
-
+    // console.log(row);
 
     var value_class  = new Array(parseInt(colunm));
     var value_table = new Array(parseInt(colunm));
@@ -31,9 +31,32 @@ function get_value_colunm_row() {
 
         count++;
         countt++;
+
+
+
         
 
     }
+
+    var count_row_index = 0 ;
+    var count_row = 1 ;
+    var value_row = new Array(parseInt(row));
+
+    for(var m = 1 ; m <= row ; m++){
+
+        $('#add_row').append('<tr class="add_td'+count_row+'"><td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td></tr>');
+
+        for(var n = 1 ; n <= row ; n++){
+
+            value_row[count_row_index] = ".add_td"+count_row;
+            $(value_row[count_row_index]).append('<td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td>');
+
+        }
+
+        count_row++;
+        count_row_index++;
+    }
+
     // for(var y = 1 ; y <= row ; y++){
 
     //     $('#add_row').append('<tr id="test"><td><div  style="width: 100px;"><input type="text" class="form-control" id=""></div></td></tr>');
